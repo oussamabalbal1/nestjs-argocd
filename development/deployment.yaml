@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nestjs
+  name: nestjs
+  namespace: ${NAMESPACE}
+spec:
+  replicas: ${REPLICAS}
+  selector:
+    matchLabels:
+      app: nestjs
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: nestjs
+    spec:
+      containers:
+      - image: ${K8S_IMAGE}
+        imagePullPolicy: Always
+        name: nestjs
+        ports:
+        - containerPort: 5005
+          name: http
+          protocol: TCP
+
