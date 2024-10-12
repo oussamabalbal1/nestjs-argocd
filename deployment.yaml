@@ -4,9 +4,9 @@ metadata:
   labels:
     app: nestjs
   name: nestjs
-  namespace: ${NAMESPACE}
+  namespace: development
 spec:
-  replicas: ${REPLICAS}
+  replicas: 2
   selector:
     matchLabels:
       app: nestjs
@@ -17,7 +17,7 @@ spec:
         app: nestjs
     spec:
       containers:
-      - image: ${K8S_IMAGE}
+      - image: workat00/usgit:1493271810
         imagePullPolicy: Always
         name: nestjs
         ports:
