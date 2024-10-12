@@ -6,7 +6,7 @@ metadata:
   name: nestjs
   namespace: development
 spec:
-  replicas: 2
+  replicas: 5
   selector:
     matchLabels:
       app: nestjs
@@ -17,7 +17,7 @@ spec:
         app: nestjs
     spec:
       containers:
-      - image: workat00/usgit:1493274491
+      - image: workat00/usgit:1493277587
         imagePullPolicy: Always
         name: nestjs
         ports:
