@@ -17,7 +17,7 @@ spec:
         app: nestjs
     spec:
       containers:
-      - image: workat00/usgit:1612037033
+      - image: workat00/usgit:1612037941
         imagePullPolicy: Always
         name: nestjs
         ports:
