@@ -6,7 +6,7 @@ metadata:
   name: nestjs
   namespace: development
 spec:
-  replicas: 8
+  replicas: 2
   selector:
     matchLabels:
       app: nestjs
